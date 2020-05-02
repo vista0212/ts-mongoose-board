@@ -2,7 +2,12 @@
   "compilerOptions": {
     "plugins": [{ "name": "typescript-tslint-plugin" }],
     "baseUrl": ".",
-    "paths": {},
+    "paths": {
+      "@Controller/*": ["routes/controllers/*"],
+      "@Middleware/*": ["routes/middlewares/*"],
+      "@Lib/*": ["lib/*"],
+      "@Type/*": ["types/*"]
+    },
     "lib": ["esnext"],
     "target": "esnext",
     "module": "commonjs",
