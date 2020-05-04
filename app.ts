@@ -4,9 +4,12 @@ import * as express from 'express';
 import * as morgan from 'morgan';
 import * as mongoose from 'mongoose';
 
+import apiController from './routes/apiController';
+
 dotenv.config();
 
 const app: express.Application = express();
+
 const connect = mongoose.connect;
 const DB_URL = process.env.DB_URL;
 
@@ -17,6 +20,8 @@ app.use(
     extended: true,
   })
 );
+
+app.use('/api', apiController);
 
 app.use((req, res, next) => {
   // err.status = 404;
