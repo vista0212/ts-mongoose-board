@@ -26,6 +26,18 @@ const Errors: { [key in ErrorType]: IError } = {
     name: 'Forbidden',
     code: 403,
   },
+  Wrong_Request: {
+    name: 'Wrong_Request',
+    code: 401,
+  },
+  Token_Expired: {
+    name: 'Token_Expired',
+    code: 401,
+  },
+  Unhandled_Error: {
+    name: 'Unhandled_Error',
+    code: 520,
+  },
 };
 
 export default Errors;
